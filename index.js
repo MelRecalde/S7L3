@@ -21,6 +21,7 @@ const fetchData = () => {
                 //col.classList.add("")
                 const card = document.createElement("div")
                 card.classList.add("card")
+                card.classList.add("text-center")
             
 
                 const cardImage = document.createElement("img")
@@ -35,7 +36,7 @@ const fetchData = () => {
                 const price = document.createElement("p")
                 price.innerText = "€ " + book.price
                 const btnContainer = document.createElement("div")
-                //btnContainer.classList.add("col")
+                btnContainer.classList.add("p-2")
                 const button = document.createElement("button")
                 button.innerText = "Discard"
                 button.classList.add("btn")
@@ -62,7 +63,12 @@ const fetchData = () => {
         }).catch((error) => {
             console.error(error)
         })
+
+        document.getElementById("btn").addEventListener("click", () => {
+            
+        });
 }
+
 
 window.addEventListener("DOMContentLoaded", () => {
     fetchData()
