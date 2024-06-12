@@ -17,17 +17,17 @@ const fetchData = () => {
 
             books.forEach( book => {
                 const col = document.createElement("div")
-                col.classList.add("col")
-                //col.classList.add("")
+                col.classList.add("col", "gy-5")
+                //col.classList.add("gy-3")
                 const card = document.createElement("div")
-                card.classList.add("card")
-                card.classList.add("text-center")
+                card.classList.add("card","text-center")
+                //card.classList.add("text-center")
             
 
                 const cardImage = document.createElement("img")
                 cardImage.src = book.img
-                cardImage.classList.add("card-img-top")
-                cardImage.classList.add("object-fit-cover")
+                cardImage.classList.add("card-img-top","object-fit-cover")
+                //cardImage.classList.add("object-fit-cover")
                 const cardBody = document.createElement("div")
                 //cardBody.classList.add("")
                 const title = document.createElement("h5")
@@ -39,8 +39,11 @@ const fetchData = () => {
                 btnContainer.classList.add("p-2")
                 const button = document.createElement("button")
                 button.innerText = "Discard"
-                button.classList.add("btn")
-                button.classList.add("btn-outline-danger")
+                button.classList.add("btn", "btn-outline-danger")
+                //button.classList.add("btn-outline-danger")
+                button.addEventListener("click", (e) => {
+                    col.remove()
+                });
                 
 
                 
@@ -63,10 +66,6 @@ const fetchData = () => {
         }).catch((error) => {
             console.error(error)
         })
-
-        document.getElementById("btn").addEventListener("click", () => {
-            
-        });
 }
 
 
